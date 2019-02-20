@@ -12,7 +12,7 @@
 <h1>Exemple 2 : </h1>
 <?php
     //ouverture du fichier en lecture/écriture
-    $fp = fopen("data.txt", "r+");
+    $fp = fopen("compteur.txt", "r+");
     //Récupération du nombre dans le fichier
     $nbvisites = fgets($fp, 11);
     //on incrémente le de visites(+1)
