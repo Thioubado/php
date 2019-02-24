@@ -34,9 +34,32 @@
     <p>Exemple 3</p>
     <?php
         $notes[] = 16;
+
+        //la fonction array_push permet d'ajouter une note ou un élément dans un tableau
+        array_push($notes, 16, 17);
         print_r($notes);
 
         
+    ?>
+    <p>exemple 4</p>
+    <?php
+        $insultes = ['merde', 'con'];
+        $phrase = 'Ce con est une merde';
+        foreach ($insultes as $insulte){
+            //trouver la première lettre
+            $lettre = substr($insulte, 0, 1);
+            
+            //la taille de chaque mot du tableau
+            $taille = strlen($insulte);
+
+            //Remplacer par des astérix la longeur de chaque mot
+            $replace = $lettre. str_repeat('*', $taille);
+            //var_dump($replace);
+            $phrase =  str_replace($insulte, $replace, $phrase);
+        }
+        echo $phrase;
+
+
     ?>
 </body>
 </html>
