@@ -1,1 +1,1 @@
-Aprés cev exercice, je dois regarder le tuto de grafikart sur les boucles, les fonctions et les fonctions utilisateurs. j'écris le nombre : 1523, comme exemple.
+Aprés cet exercice, je dois regarder le tuto de grafikart sur les boucles, les fonctions et les fonctions utilisateurs. j'écris le nombre : 1523, comme exemple.
