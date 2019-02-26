@@ -12,20 +12,22 @@
 
     <?php
 
-        //function bonjour($nom){
-            //return 'Bonjour ' .$nom. "<br>";
-       // }
+        function bonjour($nom)
+        {
+            return 'Bonjour ' .$nom. "<br>";
+        }
 
-        //$salutation = bonjour('jean');
-        //bonjour('aziz');
+        $salutation = bonjour('jean');
+        echo bonjour('Aziz');
 
     ?>
     <p>exemple 2</p>
     <?php
         $nom = "seck";
-        function bonsoir($prenom = null){
+        function bonsoir($prenom = null)
+        {
             global $nom;
-            if($prenom === null){
+            if ($prenom === null) {
                 return 'Bonsoir <br>';
             }
             return 'Bonsoir ' .$prenom.  " " .$nom.'<br>';
