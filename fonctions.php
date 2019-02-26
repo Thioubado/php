@@ -15,10 +15,9 @@
 
         $reverse = strtolower(strrev($mot));
         
-        if($mot === $reverse){
+        if ($mot === $reverse) {
             echo 'C\est un palyndrome';
-        }
-        else{
+        } else {
             echo 'Ce n\'en est pas';
         }
     ?>
@@ -45,7 +44,7 @@
     <?php
         $insultes = ['merde', 'con'];
         $phrase = 'Ce con est une merde';
-        foreach ($insultes as $insulte){
+        foreach ($insultes as $insulte) {
             //trouver la première lettre
             $lettre = substr($insulte, 0, 1);
             
@@ -53,7 +52,7 @@
             $taille = strlen($insulte);
 
             //Remplacer par des astérix la longeur de chaque mot
-            $replace = $lettre. str_repeat('*', $taille);
+            $replace = $lettre. str_repeat('*', $taille-1);
             //var_dump($replace);
             $phrase =  str_replace($insulte, $replace, $phrase);
         }
