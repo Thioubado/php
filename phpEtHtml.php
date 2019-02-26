@@ -1,12 +1,12 @@
-<?php 
+<?php
 $nav = 'index';
 ?>
 <!--<pre>
 <?php //print_r($_SERVER);?>
 </pre>-->
 <?php
-$title = 'page d\'accueil';
-require 'header.php'; 
+$title = 'Page d\'accueil';
+require 'header.php';
 ?>
     <div class="starter-template">
     <h1>Bootstrap starter template</h1>
