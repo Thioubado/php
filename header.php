@@ -49,6 +49,9 @@
       <li class="nav-item <?php if($nav === 'contact'):?>active<?php endif;?>">
         <a class="nav-link" href="contact.php">Contact</a>
       </li>
+      <li class="nav-item <?php if($nav === 'formulaire'):?>active<?php endif;?>">
+        <a class="nav-link" href="traitementDeFormulaire.php">formulaire</a>
+      </li>
   </div>
 </nav>
 
