@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>Les fonctions utilisateurs</h1>
-    <p>exemple 1</p>
-
+    <h2>Exemple 1</h2>
+    
     <?php
 
         function bonjour($nom)
@@ -21,18 +21,16 @@
         echo bonjour('Aziz');
 
     ?>
-    <p>exemple 2</p>
+    <h2>Exemple 2</h2>
     <?php
-        $nom = "seck";
+        $nom = "Seck";
         function bonsoir($prenom = null)
         {
             global $nom;
-            if ($prenom === null) {
-                return 'Bonsoir <br>';
-            }
-            return 'Bonsoir ' .$prenom.  " " .$nom.'<br>';
+            return 'Bonsoir ' . (($prenom === null)?'':$prenom .  " " . $nom) .  '<br>';
         }
-        echo bonsoir($nom);
+        echo bonsoir();
+        echo bonsoir('Moh');
     ?>
     
 </body>
