@@ -81,7 +81,7 @@ HTML;
                 <?php endforeach ?>
             </ul>
             <p>
-                <strong>Prix : </strong> <?php echo $total ?> €
+                  <strong>Prix : </strong> <?php echo $total ?> €
             </p>
         </div>
         <div class="col-md-8">
