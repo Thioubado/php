@@ -56,3 +56,7 @@
 </nav>
 
 <main role="main" class="container">
+<?php
+    require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' .DIRECTORY_SEPARATOR . 'compteur';
+    ajouter_vue();
+?>
