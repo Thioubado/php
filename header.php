@@ -6,7 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title><?php if (isset($title)){ echo $title;} else{ echo 'Mon site'; } ?></title>
+    <title><?php if (isset($title)) {
+    echo $title;
+} else {
+    echo 'Mon site';
+} ?></title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
 
@@ -43,13 +47,13 @@
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-    <li class="nav-item <?php if($nav === 'index'):?>active<?php endif;?>">
+    <li class="nav-item <?php if ($nav === 'index'):?>active<?php endif;?>">
         <a class="nav-link" href="phpEtHtml.php">Accueil</a>
       </li>
-      <li class="nav-item <?php if($nav === 'contact'):?>active<?php endif;?>">
+      <li class="nav-item <?php if ($nav === 'contact'):?>active<?php endif;?>">
         <a class="nav-link" href="contact.php">Contact</a>
       </li>
-      <li class="nav-item <?php if($nav === 'formulaire'):?>active<?php endif;?>">
+      <li class="nav-item <?php if ($nav === 'formulaire'):?>active<?php endif;?>">
         <a class="nav-link" href="traitementDeFormulaire.php">formulaire</a>
       </li>
   </div>
@@ -57,6 +61,8 @@
 
 <main role="main" class="container">
 <?php
-    require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' .DIRECTORY_SEPARATOR . 'compteur';
+    var_dump(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'php/functions' .DIRECTORY_SEPARATOR . 'compteur.php');
+
+    require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'php/functions' .DIRECTORY_SEPARATOR . 'compteur.php';
     ajouter_vue();
 ?>
