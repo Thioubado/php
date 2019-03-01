@@ -61,8 +61,10 @@
 
 <main role="main" class="container">
 <?php
-    var_dump(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'php/functions' .DIRECTORY_SEPARATOR . 'compteur.php');
+    //var_dump(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'php/functions' .DIRECTORY_SEPARATOR . 'compteur.php');
 
     require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'php/functions' .DIRECTORY_SEPARATOR . 'compteur.php';
     ajouter_vue();
 ?>
+<?php $vue = nombre_vue(); ?>
+il y a <?php echo $vue ;?> visite<?php if($vue > 1): ?>s <?php endif ?>sur le site
