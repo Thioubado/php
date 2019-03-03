@@ -1,13 +1,13 @@
 <?php
-require 'header.php'; 
+require 'header.php';
 $annees = (int)date('Y');
 $annees_selection = empty($_GET['annee']) ? null : (int)$_GET['annee'];
 $mois_selection =  empty($_GET['mois']) ? null : (int)$_GET['mois'];
 
-if($annees_selection && $mois_selection){
+if ($annees_selection && $mois_selection) {
+    echo '<h1>Cette condition semble être jamais vraie</h1>';
     $total = nombre_vue_mois($annees_selection, $mois_selection);
-}
-else{
+} else {
     $total = nombre_vue();
 }
 
@@ -25,7 +25,8 @@ $mois = [
     '11' => 'Novembre',
     '12' => 'Décembre'
 ];
-function nombre_vue_mois(int $annees, int $mois){
+function nombre_vue_mois(int $annees, int $mois)
+{
     $mois = str_pad($mois, 2, '0');
     $fichier = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'cli' . DIRECTORY_SEPARATOR . 'compteur-'.$annees . '-' .$mois;
     var_dump($fichier);
@@ -37,13 +38,13 @@ function nombre_vue_mois(int $annees, int $mois){
 
     <div class="col-md-4">
         <ul class="list-group">
-                <?php for($i= 0; $i < 5; $i++): ?>
+                <?php for ($i= 0; $i < 5; $i++): ?>
                     <a class="list-group-item <?= $annees - $i === $annees_selection ? 'active' : '' ; ?>" href="dashboard.php?annee=<?php echo $annees - $i; ?>">
                         <?php echo $annees - $i; ?>
                     </a>
-                    <?php if($annees - $i === $annees_selection): ?>
+                    <?php if ($annees - $i === $annees_selection): ?>
                         <div class="list-group">
-                            <?php foreach($mois as $numero => $nom): ?>
+                            <?php foreach ($mois as $numero => $nom): ?>
                                 <a class="list-group-item" href="dashboard.php?annee=<?php $annees_selection ;?>&mois=<?php echo $numero; ?> " >
                                     <?php echo $nom; ?>
                                 </a>
@@ -57,7 +58,7 @@ function nombre_vue_mois(int $annees, int $mois){
     <div class="col-md-8">
         <div class="card">
             <div class="card-body">
-                <strong><?php echo $total ?></strong><br> visite<?php if($total > 1): ?>s au total <?php endif ?>
+                <strong><?php echo $total ?></strong><br> visite<?php if ($total > 1): ?>s au total <?php endif ?>
             </div>
         </div>
     </div>
