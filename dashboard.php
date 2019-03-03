@@ -19,7 +19,7 @@ Pareil ! Le script a tout re ranger bien :-) !
 - Ok mais une petite question comment tu as fait pour trouver cs-fixer? 
 - Lors d\'un tuto, g vu un mec l\'utiliser... Ensuite: Github cs-fixer dans google
 - Ok je vois
-- Bien, donc, observons les vaiables...:!d'
+- Bien, donc, observons les vaiables...:!/
 </h1>
 <hr>';
 
@@ -33,8 +33,10 @@ var_dump($annees_selection, $mois_selection); // Cette ligne noous montre ce qu'
 // Pour que cette condition soit vrai il faut que les 2 parties retournent vrai (ou quelque chose)
 // Donc, faut surveiller $annees_selection, elle est à NULL et ne devrait certainement pas y être, en tous k, pas tout le temps...
 // C'est bon, je te laisse 'creuser' :) ?
-// D'aacord je comprends mieux 
-// Parfait, alors, je te laisse creuser la question pour que ça marche comme tu veux, moi, je push ce fichier tel qu'il est là, et juste un dble-clic dans GK te le donne instantannément dans ton VSC...
+// D'aacord je comprends mieux
+// Parfait, alors, je te laisse creuser la question pour que ça marche comme tu veux, moi, je push ce fichier tel qu'il est là, et juste un dble-clic dans GK te le donne instantannément dans ton VSC... Voilà, c fé :-) !
+// ok
+// tu viens de voir aussi un truc là... Tant qu'il y a une erreur ds le script, le cs-fixer ne fait pas le rangement ;-) !
 
 if ($annees_selection && $mois_selection) {
     echo '<h1>Cette condition semble être jamais vraie</h1>';
