@@ -4,6 +4,20 @@ $annees = (int)date('Y');
 $annees_selection = empty($_GET['annee']) ? null : (int)$_GET['annee'];
 $mois_selection =  empty($_GET['mois']) ? null : (int)$_GET['mois'];
 
+
+
+echo '<hr>
+<h1>
+</h1>Salut Momo: Ecris ICI qd tu es là ! :-)<br>
+- 
+
+
+
+
+
+</h1>
+<hr>';
+var_dump($annees_selection, $mois_selection);
 if ($annees_selection && $mois_selection) {
     echo '<h1>Cette condition semble être jamais vraie</h1>';
     $total = nombre_vue_mois($annees_selection, $mois_selection);
