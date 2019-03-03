@@ -2,7 +2,12 @@
 
 // Ok... C tout bon, je te laisse poursuivre :-) ?
 // Non, mntnt faut que tu travailles en local (puisque d'ailleurs, on arrive pas à descendre aisément ds les ligne du bas.... Un coup de GK et tu as la der version d'ici :-) !
-//ok
+//ok j'attends le PR alors
+// Non, GK, c + simple double clique sur ma branche et tu l'as en local !!! :-) ! Et push là bien-sûr dans ton GH
+// j'ai pas ta branche sur GK
+// Ok, sur la gauche, dans GK, dans le bloc REMOTE sur la gauche, tu vois cb de dépôts ?
+//je vois un
+// https://c57.slack.com/messages/CD1RJNGF7/team/ j'ai posé une capture
 require 'header.php';
 $annees           = (int) date('Y');
 $annees_selection = empty($_GET['annee']) ? $annees : (int) $_GET['annee'];
