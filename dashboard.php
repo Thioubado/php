@@ -1,18 +1,14 @@
 <?php
 
 // Ok... C tout bon, je te laisse poursuivre :-) ?
-//
-
+// Non, mntnt faut que tu travailles en local (puisque d'ailleurs, on arrive pas à descendre aisément ds les ligne du bas.... Un coup de GK et tu as la der version d'ici :-) !
+//ok
 require 'header.php';
 $annees           = (int) date('Y');
 $annees_selection = empty($_GET['annee']) ? $annees : (int) $_GET['annee'];
 $mois_selection   = empty($_GET['mois']) ? date('m') : (int) $_GET['mois'];
 
 var_dump($annees_selection, $mois_selection); // Cette ligne nous montre ce qu'elles contiennent
-// d'accord
-// Là, cv ;-)... Et du coup, c'est la suite en local qu'il faut peaufiner :-)// Ok, je retourne dans c57, je change la Une...
-//merci beaucoup
-
 if ($annees_selection && $mois_selection) {
     echo '<h4>Calcul du total pour le mois '.$mois_selection.' de l\'année '.$annees_selection.'</h4>';
     $total = nombre_vue_mois($annees_selection, $mois_selection);
