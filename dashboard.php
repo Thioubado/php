@@ -1,30 +1,20 @@
 <?php
 
-// Tu peux effacer: Cette condition semble être jamais vraie
-//-c'est-à dire
-//-Bin regarde dans ngrok ! Ta modif a fait son travail :-) !
-//- oui tu as raison
-// Donc: Ligne... Ha, ça bug, j'arrive pas à descendre en bas du script... Et toi ?
-// moi aussi c'est pareil
-//// alors, désactivons l'autosave (Fichier/ et décocher Enregistrement automatique) Non, c pareil... Je crois qu'il faut descendre en même temps ! Avec la touche 'Bas' du clavier, essayons
-// Oui ct la solution mais faut avouez que là, c gênant... Faudrait creuser, ils ont sûrement étudié le problème
-// oui certainement
-// En fait çà ne vas à priori que pour de tous petits scripts (ou alors, il y a moyen de gérer cela...) Bah, on le saura, et donc, dans ces cessions, préparer une sorte de résumé du script qui concerne le point à creuser... Ce qui permet déjà aussi, de cerner mieux et d'isoler le bug... ;-) !
-// oui
-// Ah ça va: la ligne et phrase à modifier est en ligne 23 , juste là !
-//oui j'ai vu
-// Actualise ngrok
-//c'est fait
+// Ok... C tout bon, je te laisse poursuivre :-) ?
+//
 
 require 'header.php';
 $annees           = (int) date('Y');
 $annees_selection = empty($_GET['annee']) ? $annees : (int) $_GET['annee'];
 $mois_selection   = empty($_GET['mois']) ? date('m') : (int) $_GET['mois'];
 
-var_dump($annees_selection, $mois_selection); // Cette ligne noous montre ce qu'elles contiennent
+var_dump($annees_selection, $mois_selection); // Cette ligne nous montre ce qu'elles contiennent
+// d'accord
+// Là, cv ;-)... Et du coup, c'est la suite en local qu'il faut peaufiner :-)// Ok, je retourne dans c57, je change la Une...
+//merci beaucoup
 
 if ($annees_selection && $mois_selection) {
-    echo '<h3></h3>Calcul du total pour le '.$mois_selection.'/'.$annees_selection.'</h3>';
+    echo '<h4>Calcul du total pour le mois '.$mois_selection.' de l\'année '.$annees_selection.'</h4>';
     $total = nombre_vue_mois($annees_selection, $mois_selection);
 } else {
     $total = nombre_vue();
