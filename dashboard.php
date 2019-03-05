@@ -1,19 +1,10 @@
 <?php
-
-// Ok... C tout bon, je te laisse poursuivre :-) ?
-// Non, mntnt faut que tu travailles en local (puisque d'ailleurs, on arrive pas à descendre aisément ds les ligne du bas.... Un coup de GK et tu as la der version d'ici :-) !
-//ok j'attends le PR alors
-// Non, GK, c + simple double clique sur ma branche et tu l'as en local !!! :-) ! Et push là bien-sûr dans ton GH
-// j'ai pas ta branche sur GK
-// Ok, sur la gauche, dans GK, dans le bloc REMOTE sur la gauche, tu vois cb de dépôts ?
-//je vois un
-// https://c57.slack.com/messages/CD1RJNGF7/team/ j'ai posé une capture
 require 'header.php';
 $annees           = (int) date('Y');
 $annees_selection = empty($_GET['annee']) ? $annees : (int) $_GET['annee'];
 $mois_selection   = empty($_GET['mois']) ? date('m') : (int) $_GET['mois'];
 
-var_dump($annees_selection, $mois_selection); // Cette ligne nous montre ce qu'elles contiennent
+//var_dump($annees_selection, $mois_selection); 
 if ($annees_selection && $mois_selection) {
     echo '<h4>Calcul du total pour le mois '.$mois_selection.' de l\'année '.$annees_selection.'</h4>';
     $total = nombre_vue_mois($annees_selection, $mois_selection);
@@ -35,12 +26,16 @@ $mois = [
     '11' => 'Novembre',
     '12' => 'Décembre',
 ];
-function nombre_vue_mois(int $annees, int $mois)
+function nombre_vue_mois(int $annees, int $mois): int
 {
-    $mois    = str_pad($mois, 2, '0');
+    $mois    = str_pad($mois, 2, '0', STR_PAD_LEFT);
     $fichier = dirname(__DIR__).DIRECTORY_SEPARATOR.'cli'.DIRECTORY_SEPARATOR.'compteur-'.$annees.'-'.$mois;
-    var_dump($fichier);
-    exit();
+    $fichiers = glob($fichier);
+    $total = 0;
+    foreach($fichiers as $fichier){
+        $total += (int)file_get_contents($fichier);
+    }
+    return $total;
 }
 ?>
 
