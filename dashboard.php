@@ -1,4 +1,10 @@
 <?php
+session_start();
+require_once 'auth.php';
+if(!est_connecte()){
+    header('Location: /php/dashboard.php');
+    exit();
+}
 require 'header.php';
 $annee = (int)date('Y');
 $annee_selection = empty($_GET['annee']) ? $annee : (int)$_GET['annee'];
