@@ -10,10 +10,18 @@ $annee = (int)date('Y');
 $annee_selection = empty($_GET['annee']) ? $annee : (int)$_GET['annee'];
 $mois_selection = empty($_GET['mois']) ? date('m') : $_GET['mois'];
 
+<<<<<<< HEAD
 if($annee_selection && $mois_selection){
     $total = nombre_vue_mois($annee_selection, $mois_selection);
 }
 else{
+=======
+//var_dump($annees_selection, $mois_selection);
+if ($annees_selection && $mois_selection) {
+    echo '<h4>Calcul du total pour le mois '.$mois_selection.' de l\'année '.$annees_selection.'</h4>';
+    $total = nombre_vue_mois($annees_selection, $mois_selection);
+} else {
+>>>>>>> GC7
     $total = nombre_vue();
 }
 
@@ -31,6 +39,7 @@ $mois = [
     '11' => 'Novembre',
     '12' => 'Décembre'
 ];
+<<<<<<< HEAD
 
 
 function nombre_vue_mois(int $annee, int $mois): int {
@@ -42,6 +51,18 @@ function nombre_vue_mois(int $annee, int $mois): int {
         $total += (int) file_get_contents($fichier);
     }
     
+=======
+function nombre_vue_mois(int $annees, int $mois): int
+{
+    $mois     = str_pad($mois, 2, '0', STR_PAD_LEFT);
+    $fichier  = dirname(__DIR__).DIRECTORY_SEPARATOR.'cli'.DIRECTORY_SEPARATOR.'compteur-'.$annees.'-'.$mois;
+    $fichiers = glob($fichier);
+    $total    = 0;
+    foreach ($fichiers as $fichier) {
+        $total += (int) file_get_contents($fichier);
+    }
+
+>>>>>>> GC7
     return $total;
 }
 
